@@ -1,0 +1,26 @@
+logging:
+    level: INFO
+    loggers:
+        com.deb.dw.rest: DEBUG
+    appenders:
+        -
+            type: console
+            timeZone: UTC
+            target: stdout
+server:
+    applicationConnectors:
+        -
+            type: http
+            port: 8087
+    adminConnectors:
+        -
+            type: http
+            port: 8088
+    requestLog:
+        appenders:
+            -
+                type: console
+                timeZone: UTC
+                target: stdout
+template: 'Hello, %s!'
+defaultName: Stranger
